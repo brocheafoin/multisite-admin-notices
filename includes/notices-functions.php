@@ -147,7 +147,7 @@ function msan_get_notice( $notice_id ){
 		$_notice = array(
 			'id'           => $notice->ID,
 			'message'      => $notice->post_content,
-			'last_updated' => $notice->post_modified_gmt,
+			'last_update' => date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), strtotime( $notice->post_modified ) ),
 		);
 	}
 
